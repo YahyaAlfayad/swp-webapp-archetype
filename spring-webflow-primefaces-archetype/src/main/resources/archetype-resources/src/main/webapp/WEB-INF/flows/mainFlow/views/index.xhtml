@@ -1,0 +1,44 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:comp="http://java.sun.com/jsf/composite/composites"
+	xmlns:p="http://primefaces.org/ui"
+	xmlns:c="http://java.sun.com/jsp/jstl/core">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition
+	template="/WEB-INF/flows/mainFlow/template/template.xhtml">
+	<ui:define name="title">${symbol_pound}{msg.title}</ui:define>
+	<ui:define name="content">
+		<div dir="${symbol_pound}{langUtils.langDir}">
+			<h1>${symbol_pound}{msg.welcomeMsg}</h1>
+			<p>Content goes here</p>
+			<img src="${symbol_pound}{request.contextPath}/app/resources/welcome.png" />
+			<p>${symbol_pound}{msg.hello}</p>
+			<p>
+				User name: ${symbol_pound}{sec.userName}<br /> Password: ${symbol_pound}{sec.password}<br />
+				isAuthenticated: ${symbol_pound}{sec.authenticated}<br /> authorities:
+				${symbol_pound}{sec.authorities}<br /> is anonymous: ${symbol_pound}{sec.anonymous}<br /> is
+				remember me: ${symbol_pound}{sec.rememberMe}<br /> is fully authenticated:
+				${symbol_pound}{sec.fullyAuthenticated}<br /> Remote IP: ${symbol_pound}{sec.remoteAddress}<br />
+				is localhost: ${symbol_pound}{sec.hasAddress('127.0.0.1')}<br /> has address of
+				192.168.1.1: ${symbol_pound}{sec.hasAddress('192.168.1.1')}<br /> is logged in:
+				${symbol_pound}{!sec.anonymous}<br /> is Admin: ${symbol_pound}{sec.hasRole('ROLE_ADMIN')}<br />
+				has admin role: ${symbol_pound}{sec.hasAnyRole('ROLE_ADMIN, ROLE_USER')}<br />
+				has all roles admin, anonymous:
+				${symbol_pound}{sec.hasAllRoles('ROLE_ADMIN,ROLE_ANONYMOUS')}
+			</p>
+		</div>
+		<comp:login />
+	</ui:define>
+</ui:composition>
+
+</html>

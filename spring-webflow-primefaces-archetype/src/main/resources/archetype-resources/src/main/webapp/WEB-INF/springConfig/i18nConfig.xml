@@ -1,0 +1,26 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:org.swp.mvc="http://www.springframework.org/schema/org.swp.mvc"
+	xsi:schemaLocation="http://www.springframework.org/schema/org.swp.mvc http://www.springframework.org/schema/org.swp.mvc/spring-org.swp.mvc-3.2.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+<!-- 	<org.swp.mvc:interceptors> -->
+<!-- 		<bean class="org.springframework.web.servlet.i18n.LocaleChangeInterceptor"> -->
+<!-- 			<property name="paramName" value="lang"></property> -->
+<!-- 		</bean> -->
+<!-- 	</org.swp.mvc:interceptors> -->
+<!-- 	<bean id="messageSource" -->
+<!-- 		class="org.springframework.context.support.ReloadableResourceBundleMessageSource"> -->
+<!-- 		<property name="basenames" -->
+<!-- 			value="/WEB-INF/flows/mainFlow/i18n/msg"> -->
+<!-- 		</property> -->
+<!-- 	</bean> -->
+<!-- 	<bean id="localeResolver" -->
+<!-- 		class="org.springframework.web.servlet.i18n.CookieLocaleResolver"> -->
+<!-- 		<property name="cookieName" value="locale"></property> -->
+<!-- 	</bean> -->
+</beans>

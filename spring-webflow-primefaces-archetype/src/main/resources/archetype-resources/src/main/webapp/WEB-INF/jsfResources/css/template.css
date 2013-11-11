@@ -1,0 +1,27 @@
+@CHARSET "UTF-8";
+
+.template-table {
+	width: 100%;
+}
+
+.header {
+	background-color: aqua;
+}
+
+.left-column {
+	width: 200px;
+	background-color: blue;
+}
+
+.right-column {
+	width: 250px;
+	background-color: red;
+}
+
+.content {
+	/* width: 100%; */
+}
+
+.footer {
+	background-color: yellow;
+}

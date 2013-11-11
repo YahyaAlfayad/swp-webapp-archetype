@@ -1,0 +1,33 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:p="http://primefaces.org/ui">
+
+<!-- 
+		Replace path to template, title, header and body
+		with actual data.
+	 -->
+<ui:composition
+	template="/WEB-INF/flows/controlPanel/template/template.xhtml">
+	<ui:define name="title">${symbol_pound}{cpMessages.title}</ui:define>
+	<ui:define name="content">
+		<div dir="${symbol_pound}{langUtils.langDir}">
+			<h1>${symbol_pound}{cpMessages.welcome}</h1>
+			<p>Content goes here!</p>
+			<h:form>
+				<p:commandButton value="click me" />
+			</h:form>
+			<p>
+				<img src="${symbol_dollar}{request.contextPath}/app/adminResources/admin.png"
+					alt="admin picture must be here" />
+			</p>
+			<p>${symbol_pound}{cpMessages.welcome}</p>
+		</div>
+	</ui:define>
+</ui:composition>
+</html>

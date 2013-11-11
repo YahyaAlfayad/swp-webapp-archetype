@@ -1,0 +1,35 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:h="http://java.sun.com/jsf/html"
+	xmlns:f="http://java.sun.com/jsf/core"
+	xmlns:ui="http://java.sun.com/jsf/facelets"
+	xmlns:comp="http://java.sun.com/jsf/composite/composites/template">
+<h:head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+	<title><ui:insert name="title" /></title>
+	<!-- 	<link rel="stylesheet" type="text/css" -->
+	<!-- 		href="/app/resources/template.css" /> -->
+	<h:outputStylesheet library="css" name="template.css" />
+</h:head>
+<h:body>
+	<f:view>
+		<table class="template-table" align="center">
+			<tr>
+				<td colspan="3" class="header"><comp:header /></td>
+			</tr>
+			<tr>
+				<td class="left-column"><comp:leftColumn /></td>
+				<td class="content"><ui:insert name="content" /></td>
+				<td class="right-column"><comp:rightColumn /></td>
+			</tr>
+			<tr>
+				<td colspan="3" class="footer"><comp:footer /></td>
+			</tr>
+		</table>
+	</f:view>
+</h:body>
+</html>

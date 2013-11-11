@@ -1,0 +1,28 @@
+#set( $symbol_pound = '#' )
+#set( $symbol_dollar = '$' )
+#set( $symbol_escape = '\' )
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+
+	<!-- <bean id="loginManagedBean" class="mvc.login.LoginManagedBean"></bean> -->
+
+	<bean id="sec" class="org.swp.mvc.login.SecurityManagedBean"
+		scope="request" lazy-init="true">
+	</bean>
+	<bean id="langUtils" class="org.swp.mvc.i18n.util.LangUtils"
+		scope="request" lazy-init="true">
+	</bean>
+	<bean id="usernameValidRegexp" scope="singleton" class="java.lang.String">
+		<constructor-arg value="[a-zA-Z@_.]*" />
+	</bean>
+	<bean id="passwordValidRegexp" scope="singleton" class="java.lang.String">
+		<constructor-arg value="[a-zA-Z@_.]*" />
+	</bean>
+	<bean id="loginManagedBean" class="org.swp.mvc.login.LoginManagedBean"
+		scope="request">
+		<property name="authenticationManager" ref="authenticationManager" />
+	</bean>
+</beans>
