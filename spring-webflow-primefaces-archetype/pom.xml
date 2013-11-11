@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 
 	<groupId>org.dls.archetypes</groupId>
-	<artifactId>spring-webflow-primefaces-archetype</artifactId>
+	<artifactId>swp-webapp-archetype</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<packaging>maven-archetype</packaging>
 
